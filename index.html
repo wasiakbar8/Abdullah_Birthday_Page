@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Abdullah Raffique</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@600&display=swap');
+
+        :root {
+            --royal-purple: #1a0a2e;
+            --midnight: #0a0a12;
+            --gold: #d4af37;
+            --accent-pink: #ff4f9a;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--midnight);
+            color: white;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Classic Background --- */
+        .bg-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, var(--royal-purple) 0%, var(--midnight) 100%);
+            z-index: -2;
+        }
+
+        /* --- Fast-Moving Balloon Engine --- */
+        .balloon {
+            position: fixed;
+            bottom: -150px;
+            width: 50px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.8;
+            box-shadow: inset -5px -5px 15px rgba(0,0,0,0.3);
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -30px; left: 50%;
+            width: 1px; height: 35px;
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* --- Music Controls --- */
+        .nav-controls {
+            position: fixed;
+            top: 25px; right: 25px;
+            z-index: 1000;
+        }
+
+        .btn-music {
+            background: var(--glass);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-music:hover { background: var(--gold); color: #000; box-shadow: 0 0 15px var(--gold); }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .photo-wrap {
+            position: relative;
+            width: 220px; height: 220px;
+            margin-bottom: 25px;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .photo-wrap img {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--gold);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .hb-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--accent-pink);
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 10vw, 4.5rem);
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .bf-quote {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            color: rgba(255,255,255,0.9);
+            margin-top: 15px;
+            max-width: 600px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* --- Selection Section --- */
+        .treat-selection {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-header {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .instruction {
+            opacity: 0.6;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .option-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(15px);
+            position: relative;
+        }
+
+        .option-card:hover {
+            transform: scale(1.05) translateY(-10px);
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .option-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .option-card p {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
+
+        .checkbox {
+            margin-top: 20px;
+            width: 25px; height: 25px;
+            border: 2px solid var(--gold);
+            display: inline-block;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .option-card:hover .checkbox {
+            background: var(--gold);
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        /* --- Floating/Hover Animations --- */
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        #confetti {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 99;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-layer"></div>
+    <canvas id="confetti"></canvas>
+
+    <div class="nav-controls">
+        <button class="btn-music" onclick="toggleMusic()" id="musicBtn">🎵</button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero">
+        <div class="photo-wrap">
+            <img src="abd.jpg" alt="Abdullah Raffique" onerror="this.src='https://ui-avatars.com/api/?name=Abdullah+Raffique&size=250&background=1a0a2e&color=d4af37'">
+        </div>
+        <p class="hb-text">Happy Birthday</p>
+        <h1>Abdullah Raffique</h1>
+        <p class="bf-quote">"A brother not by blood, but by heart. <br>To the constant who makes every moment a celebration."</p>
+    </section>
+
+    <section class="treat-selection">
+        <h2 class="section-header">The Birthday Treat</h2>
+        <p class="instruction">Choose your celebration destination</p>
+        
+        <div class="grid">
+            <div class="option-card" onclick="triggerSelection(this)">
+                <h3>Frys & Gus</h3>
+                <p>For the elite palate craving refined gourmet textures.</p>
+                <div class="checkbox"></div>
+            </div>
+
+            <div class="option-card" onclick="triggerSelection(this)">
+                <h3>Hot n Yum</h3>
+                <p>Spicy, vibrant, and full of energy. A bold choice for a bold day.</p>
+                <div class="checkbox"></div>
+            </div>
+
+            <div class="option-card" onclick="triggerSelection(this)">
+                <h3>Cheezious</h3>
+                <p>The legendary comfort of perfection. Our brotherhood tradition.</p>
+                <div class="checkbox"></div>
+            </div>
+
+            <div class="option-card" onclick="triggerSelection(this)">
+                <h3>Elite Choice</h3>
+                <p>A grand fine-dining experience at the peak for a royal celebration.</p>
+                <div class="checkbox"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 80px; opacity: 0.3; font-size: 0.7rem; letter-spacing: 4px;">
+        ESTABLISHED 2026 | FOR ABDULLAH RAFFIQUE
+    </footer>
+
+    <script>
+        // --- High-Speed Balloon Engine ---
+        function createBalloon() {
+            const colors = ['#d4af37', '#ff4f9a', '#ffffff', '#6a0dad', '#00d4ff'];
+            const b = document.createElement('div');
+            b.className = 'balloon';
+            const color = colors[Math.floor(Math.random()*colors.length)];
+            b.style.backgroundColor = color;
+            b.style.color = color;
+            b.style.left = Math.random() * 100 + 'vw';
+            
+            document.body.appendChild(b);
+
+            // Fast flight: 4-6 seconds
+            const duration = 4000 + Math.random() * 2000;
+            const drift = (Math.random() - 0.5) * 180;
+
+            const anim = b.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 0.9 },
+                { transform: `translateY(-130vh) rotate(${Math.random()*360}deg)`, opacity: 0 }
+            ], { duration: duration, easing: 'ease-in' });
+
+            anim.onfinish = () => b.remove();
+        }
+        
+        // Rapid spawn rate for high energy
+        setInterval(createBalloon, 400);
+
+        // --- Confetti Engine ---
+        const canvas = document.getElementById('confetti');
+        const ctx = canvas.getContext('2d');
+        let pieces = [];
+
+        function initConfetti() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            for(let i=0; i<70; i++) {
+                pieces.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 6 + 2,
+                    color: `hsl(${Math.random() * 360}, 70%, 55%)`,
+                    speed: Math.random() * 5 + 3
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+            pieces.forEach(p => {
+                p.y += p.speed;
+                ctx.fillStyle = p.color;
+                ctx.fillRect(p.x, p.y, p.size, p.size);
+                if(p.y > canvas.height) p.y = -15;
+            });
+            requestAnimationFrame(draw);
+        }
+
+        // --- Music Controls ---
+        function toggleMusic() {
+            const m = document.getElementById('bgMusic');
+            const btn = document.getElementById('musicBtn');
+            if(m.paused) {
+                m.play();
+                btn.innerHTML = "🔊";
+            } else {
+                m.pause();
+                btn.innerHTML = "🎵";
+            }
+        }
+
+        function triggerSelection(el) {
+            // Visual feedback on click
+            el.style.borderColor = "#ff4f9a";
+            setTimeout(() => { el.style.borderColor = "#d4af37"; }, 500);
+        }
+
+        window.onload = () => {
+            initConfetti();
+            draw();
+            // Start with a burst of balloons
+            for(let i=0; i<10; i++) setTimeout(createBalloon, i * 100);
+        };
+
+        window.onresize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+    </script>
+</body>
+</html>

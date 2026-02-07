@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Abdullah Raffique</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@600&family=Great+Vibes&display=swap');
 
         :root {
             --royal-purple: #1a0a2e;
@@ -29,7 +29,7 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Classic Background --- */
+        /* --- Background --- */
         .bg-layer {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -37,7 +37,7 @@
             z-index: -2;
         }
 
-        /* --- Fast-Moving Balloon Engine --- */
+        /* --- Ultra-Fast Balloon Engine --- */
         .balloon {
             position: fixed;
             bottom: -150px;
@@ -69,7 +69,7 @@
             background: var(--glass);
             border: 1px solid var(--gold);
             color: var(--gold);
-            width: 45px; height: 45px;
+            width: 50px; height: 50px;
             border-radius: 50%;
             cursor: pointer;
             backdrop-filter: blur(10px);
@@ -79,7 +79,7 @@
             justify-content: center;
         }
 
-        .btn-music:hover { background: var(--gold); color: #000; box-shadow: 0 0 15px var(--gold); }
+        .btn-music:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px var(--gold); }
 
         /* --- Hero Section --- */
         .hero {
@@ -118,7 +118,7 @@
 
         h1 {
             font-family: 'Cinzel', serif;
-            font-size: clamp(2rem, 10vw, 4.5rem);
+            font-size: clamp(2.2rem, 10vw, 4.5rem);
             color: var(--gold);
             letter-spacing: 4px;
             text-transform: uppercase;
@@ -134,10 +134,49 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
-        /* --- Selection Section --- */
+        /* --- Friendship Section --- */
+        .friendship-section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .years-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--accent-pink));
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .friendship-text {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .friendship-text strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* --- Treat Selection Section --- */
         .treat-selection {
             padding: 100px 20px;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             text-align: center;
         }
@@ -146,20 +185,12 @@
             font-family: 'Cinzel', serif;
             font-size: 2.2rem;
             color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .instruction {
-            opacity: 0.6;
             margin-bottom: 50px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
         }
 
@@ -169,21 +200,18 @@
             padding: 40px 20px;
             border-radius: 20px;
             cursor: pointer;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: 0.4s;
             backdrop-filter: blur(15px);
-            position: relative;
         }
 
         .option-card:hover {
-            transform: scale(1.05) translateY(-10px);
+            transform: scale(1.05);
             border-color: var(--gold);
             background: rgba(212, 175, 55, 0.08);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
         .option-card h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
             margin-bottom: 12px;
             color: #fff;
         }
@@ -194,30 +222,68 @@
             line-height: 1.6;
         }
 
-        .checkbox {
+        .circle-select {
             margin-top: 20px;
-            width: 25px; height: 25px;
+            width: 22px; height: 22px;
             border: 2px solid var(--gold);
-            display: inline-block;
             border-radius: 50%;
-            transition: 0.3s;
+            display: inline-block;
         }
 
-        .option-card:hover .checkbox {
-            background: var(--gold);
-            box-shadow: 0 0 15px var(--gold);
+        /* --- Footer & Regards --- */
+        .footer {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0,0,0,0.2);
         }
 
-        /* --- Floating/Hover Animations --- */
+        .regards-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .regards-sub {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            opacity: 0.4;
+        }
+
+        /* --- Animations --- */
         @keyframes floating {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         #confetti {
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%;
             pointer-events: none; z-index: 99;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .years-badge {
+                font-size: 0.95rem;
+                padding: 10px 25px;
+            }
+
+            .friendship-text {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -239,74 +305,70 @@
             <img src="abd.jpg" alt="Abdullah Raffique" onerror="this.src='https://ui-avatars.com/api/?name=Abdullah+Raffique&size=250&background=1a0a2e&color=d4af37'">
         </div>
         <p class="hb-text">Happy Birthday</p>
-        <h1>Abdullah Raffique</h1>
+        <h1>Abdullah Rafiq</h1>
         <p class="bf-quote">"A brother not by blood, but by heart. <br>To the constant who makes every moment a celebration."</p>
     </section>
 
+    <section class="friendship-section">
+        <div class="years-badge">6 YEARS OF BROTHERHOOD</div>
+        <p class="friendship-text">
+           Can't believe it's been around 6 years since we've been rocking this brotherly bond. We've shared countless memories, and I'm grateful for the gapless connection we have. We're more than friends, we're family. You've been there for me through thick and thin, and I'm honored to have you in my life. Here's to many more adventures, laughter, and memories to create together! Wishing you a birthday as awesome as you are!.</strong>
+        </p>
+    </section>
+
     <section class="treat-selection">
-        <h2 class="section-header">The Birthday Treat</h2>
-        <p class="instruction">Choose your celebration destination</p>
-        
+        <h2 class="section-header">The Birthday Treat Ballot</h2>
         <div class="grid">
-            <div class="option-card" onclick="triggerSelection(this)">
+            <div class="option-card" onclick="this.style.borderColor='#ff4f9a'">
                 <h3>Frys & Gus</h3>
-                <p>For the elite palate craving refined gourmet textures.</p>
-                <div class="checkbox"></div>
+                <p>A gourmet experience for the refined palate.</p>
+                <div class="circle-select"></div>
             </div>
-
-            <div class="option-card" onclick="triggerSelection(this)">
+            <div class="option-card" onclick="this.style.borderColor='#ff4f9a'">
                 <h3>Hot n Yum</h3>
-                <p>Spicy, vibrant, and full of energy. A bold choice for a bold day.</p>
-                <div class="checkbox"></div>
+                <p>Spicy, bold, and energetic birthday vibes.</p>
+                <div class="circle-select"></div>
             </div>
-
-            <div class="option-card" onclick="triggerSelection(this)">
+            <div class="option-card" onclick="this.style.borderColor='#ff4f9a'">
                 <h3>Cheezious</h3>
-                <p>The legendary comfort of perfection. Our brotherhood tradition.</p>
-                <div class="checkbox"></div>
+                <p>The legendary taste of brotherhood tradition.</p>
+                <div class="circle-select"></div>
             </div>
-
-            <div class="option-card" onclick="triggerSelection(this)">
+            <div class="option-card" onclick="this.style.borderColor='#ff4f9a'">
                 <h3>Elite Choice</h3>
-                <p>A grand fine-dining experience at the peak for a royal celebration.</p>
-                <div class="checkbox"></div>
+                <p>A royal celebration at the highest peak.</p>
+                <div class="circle-select"></div>
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 80px; opacity: 0.3; font-size: 0.7rem; letter-spacing: 4px;">
-        ESTABLISHED 2026 | FOR ABDULLAH RAFFIQUE
+    <footer class="footer">
+        <p class="regards-sub">With Sincere</p>
+        <p class="regards-text">Regards: Wasi Akbar</p>
+        <p style="margin-top: 20px; font-size: 0.6rem; opacity: 0.3; letter-spacing: 2px;">CELEBRATING FEB 8, 2026</p>
     </footer>
 
     <script>
-        // --- High-Speed Balloon Engine ---
+        // --- Rapid Balloon Engine ---
         function createBalloon() {
-            const colors = ['#d4af37', '#ff4f9a', '#ffffff', '#6a0dad', '#00d4ff'];
+            const colors = ['#d4af37', '#ff4f9a', '#ffffff', '#6a0dad'];
             const b = document.createElement('div');
             b.className = 'balloon';
-            const color = colors[Math.floor(Math.random()*colors.length)];
-            b.style.backgroundColor = color;
-            b.style.color = color;
+            b.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
             b.style.left = Math.random() * 100 + 'vw';
-            
             document.body.appendChild(b);
 
-            // Fast flight: 4-6 seconds
-            const duration = 4000 + Math.random() * 2000;
-            const drift = (Math.random() - 0.5) * 180;
-
+            const duration = 4000 + Math.random() * 2000; // Fast speed (4-6s)
             const anim = b.animate([
-                { transform: 'translateY(0) rotate(0deg)', opacity: 0.9 },
+                { transform: 'translateY(0) rotate(0deg)', opacity: 0.8 },
                 { transform: `translateY(-130vh) rotate(${Math.random()*360}deg)`, opacity: 0 }
             ], { duration: duration, easing: 'ease-in' });
 
             anim.onfinish = () => b.remove();
         }
-        
-        // Rapid spawn rate for high energy
-        setInterval(createBalloon, 400);
+        setInterval(createBalloon, 400); // High frequency
 
-        // --- Confetti Engine ---
+        // --- Confetti ---
         const canvas = document.getElementById('confetti');
         const ctx = canvas.getContext('2d');
         let pieces = [];
@@ -314,13 +376,13 @@
         function initConfetti() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            for(let i=0; i<70; i++) {
+            for(let i=0; i<60; i++) {
                 pieces.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     size: Math.random() * 6 + 2,
                     color: `hsl(${Math.random() * 360}, 70%, 55%)`,
-                    speed: Math.random() * 5 + 3
+                    speed: Math.random() * 4 + 2
                 });
             }
         }
@@ -336,7 +398,6 @@
             requestAnimationFrame(draw);
         }
 
-        // --- Music Controls ---
         function toggleMusic() {
             const m = document.getElementById('bgMusic');
             const btn = document.getElementById('musicBtn');
@@ -349,19 +410,11 @@
             }
         }
 
-        function triggerSelection(el) {
-            // Visual feedback on click
-            el.style.borderColor = "#ff4f9a";
-            setTimeout(() => { el.style.borderColor = "#d4af37"; }, 500);
-        }
-
         window.onload = () => {
             initConfetti();
             draw();
-            // Start with a burst of balloons
-            for(let i=0; i<10; i++) setTimeout(createBalloon, i * 100);
+            for(let i=0; i<10; i++) setTimeout(createBalloon, i * 150);
         };
-
         window.onresize = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
